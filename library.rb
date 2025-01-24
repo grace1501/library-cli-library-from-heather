@@ -1,42 +1,9 @@
 require_relative "book"
-require_relative "checkedout_books"
 
 class Library 
   def initialize
     @books = []
   end #initialize
-
-  def run
-    loop do
-      puts "Welcome to your virtual library!"
-      puts "What would you like to do?"
-      puts "1. View books by genre"
-      puts "2. View the whole library"
-      puts "3. Add a book"
-      puts "4. Exit"
-      print "Choose an option"
-      
-      option = gets.chomp.to_i
-
-      case option
-      when 1
-        list_by_genre
-      when 2
-        list_all
-      when 3
-        add_book
-      when 4
-        puts "Thank you for visiting the library!"
-      else
-        puts "Invalid selection, please choose a number"
-        puts "What would you like to do?"
-        puts "1. View books by genre"
-        puts "2. View the whole library"
-        puts "3. Add a book"
-        puts "4. Exit"
-      end #case
-    end #do
-  end #def run
 
   def list_by_genre
     puts "What genre are you interested in?"
@@ -50,7 +17,7 @@ class Library
     puts "8. Young Adult"
     puts "9. Children"
     puts "0. All categories"
-    print "select a genre"
+    puts "select a genre"
 
     genres = gets.chomp.to_i
 
@@ -145,7 +112,7 @@ class Library
 
     puts "All Sci Fi Books in the Library"
     @books.each do |book|
-      if genre == Sci Fi
+      if genre == SciFi
         puts book
       end #if
     end #do
@@ -165,7 +132,7 @@ class Library
 
     puts "All Young Adult Books in the Library"
     @books.each do |book|
-      if genre == Young Adult
+      if genre == YoungAdult
         puts book
       end #if
     end #do
@@ -193,20 +160,51 @@ class Library
       title = gets.chomp.capitalize
     print "Enter author name: "
       author = gets.chomp.capitalize
-    print "Enter genre from the list"
+    puts "Enter genre from the list"
     puts "Fiction"
     puts "Non-fiction"
     puts "Poetry"
     puts "Romance"
     puts "Thiller"
     puts "Horror"
-    puts "Sci Fi"
+    puts "SciFi"
     puts "Spirituality"
-    puts "Young Adult"
+    puts "YoungAdult"
     puts "Children"
       genre = gets.chomp.capitalize
       @books << Book.new(title, author, genre)
     puts "Your book has been added!"
   end #add_book
 
+  def run
+    loop do
+      puts "Welcome to your virtual library!"
+      puts "What would you like to do?"
+      puts "1. View books by genre"
+      puts "2. View the whole library"
+      puts "3. Add a book"
+      puts "4. Exit"
+      puts "Choose an option"
+      
+      option = gets.chomp.to_i
+
+      case option
+      when 1
+        list_by_genre
+      when 2
+        list_all
+      when 3
+        add_book
+      when 4
+        puts "Thank you for visiting the library!"
+      else
+        puts "Invalid selection, please choose a number"
+        puts "What would you like to do?"
+        puts "1. View books by genre"
+        puts "2. View the whole library"
+        puts "3. Add a book"
+        puts "4. Exit"
+      end #case
+    end # loop do
+  end #run
 end #Library
