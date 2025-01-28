@@ -1,6 +1,6 @@
 require_relative "book"
 
-class Library 
+class Library
   def initialize
     @books = []
   end #initialize
