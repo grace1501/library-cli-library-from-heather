@@ -1,6 +1,6 @@
+# Library CLI
 This program will help libraries to categorize books and organize books.
 
-As a user, I want to view the library of books by genre
-As a user, I want to view the entire library of books
-As a user, I want to add a book to the library
-As a user, I want to exit the library
+## How to run it
+
+Enter `ruby library_app.rb`
