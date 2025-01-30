@@ -5,6 +5,10 @@ class Library
     @books = []
   end #initialize
 
+  def books
+    return @books
+  end
+
   def list_by_genre
     puts "What genre are you interested in?"
     puts "1. Fiction"
