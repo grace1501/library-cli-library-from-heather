@@ -157,12 +157,12 @@ class Library
 
   def add_book
     print "Enter book title: "
-      title = gets.chomp.capitalize
+      title = gets.chomp
     print "Enter author name: "
-      author = gets.chomp.capitalize
+      author = gets.chomp
     puts "Enter genre from the list"
     puts "Fiction"
-    puts "Non-fiction"
+    puts "Non-Fiction"
     puts "Poetry"
     puts "Romance"
     puts "Thiller"
@@ -171,7 +171,7 @@ class Library
     puts "Spirituality"
     puts "Young-Adult"
     puts "Children"
-      genre = gets.chomp.capitalize
+      genre = gets.chomp
       @books << Book.new(title, author, genre)
     puts "Your book has been added!"
   end #add_book
