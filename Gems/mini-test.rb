@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 gem "minitest"
 
-require 'minitest/autorun'
+require 'mini-test/autorun'
 require_relative '../library'  
 require_relative '../book'  
 

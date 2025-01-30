@@ -14,7 +14,7 @@ class Library
     puts "5. Thiller/ Horror"
     puts "6. Sci-Fi"
     puts "7. Spirituality"
-    puts "8. Young Adult"
+    puts "8. Young-Adult"
     puts "9. Children"
     puts "0. All categories"
     puts "select a genre"
@@ -46,13 +46,13 @@ class Library
       puts "Invalid choice, please select a genre."
       puts "What genre are you interested in?"
       puts "1. Fiction"
-      puts "2. Non-fiction"
+      puts "2. Non-Fiction"
       puts "3. Poetry"
       puts "4. Romance"
       puts "5. Thiller/ Horror"
-      puts "6. Sci-Fi"
+      puts "6. SciFi"
       puts "7. Spirituality"
-      puts "8. Young Adult"
+      puts "8. Young-Adult"
       puts "9. Children"
       puts "0. All categories"
     end #case
@@ -130,9 +130,9 @@ class Library
 
   def yadult_list
 
-    puts "All Young Adult Books in the Library"
+    puts "All Young-Adult Books in the Library"
     @books.each do |book|
-      if genre == YoungAdult
+      if genre == Young-Adult
         puts book
       end #if
     end #do
@@ -169,7 +169,7 @@ class Library
     puts "Horror"
     puts "SciFi"
     puts "Spirituality"
-    puts "YoungAdult"
+    puts "Young-Adult"
     puts "Children"
       genre = gets.chomp.capitalize
       @books << Book.new(title, author, genre)
